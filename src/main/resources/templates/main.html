@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<script src="/js/script.js"></script>
+
+<body>
+<h1 th:text="${message}">Playing with Spring and Thymeleaf</h1>
+<p>Endpoints:</p>
+
+<!-- Basic Hi -->
+<div class="api-container">
+    <button class="api-button" onclick="basicCall('/hi', this, 'basicHi')">Basic test hi</button>
+    <div class="api-result" id="basicHi" style="display: none;"></div>
+</div>
+
+<!-- All records -->
+<div class="api-container">
+    <button class="api-button" onclick="callApi('/f', this, 'fetchAllResult')">Fetch all records</button>
+    <div class="api-result" id="fetchAllResult" style="display: none;"></div>
+</div>
+
+<!-- Get record by ID -->
+<div class="api-container">
+    <form id="fetchByIdForm">
+        <button type="button" class="api-button" onclick="getItemById(this)">Find by id</button>
+        <label for="name">ID:</label>
+        <input type="text" class="param-input" id="id" name="id" placeholder="ID" required>
+    </form>
+    <div class="api-result" id="fetchedByIdResult" style="display: none;"></div>
+</div>
+
+<!-- Add new item -->
+<div class="api-container">
+    <form id="orderForm">
+        <button type="button" class="api-button" onclick="submitOrder()">Add item</button>
+
+        <label for="name">Name:</label>
+        <input type="text" class="param-input" id="name" name="name" placeholder="Name" required>
+
+        <label for="description">Description:</label>
+        <input type="text" class="param-input" id="description" name="description" placeholder="Description" required>
+
+        <label for="price">Price:</label>
+        <input type="number" class="param-input" id="price" name="price" placeholder="Price" required>
+
+        <label for="orderDateTime">Date and time:</label>
+        <input type="datetime-local" class="param-input" id="orderDateTime" name="orderDateTime" required>
+
+    </form>
+    <div class="api-result" id="orderResult" style="display: none;"></div>
+</div>
+
+
+</body>
+</html>

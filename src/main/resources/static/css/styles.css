@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.api-container {
+    display: flex; /* Ustawienie układu na flexbox */
+    align-items: center; /* Wyrównanie elementów pionowo na środku */
+    justify-content: flex-start; /* Wyrównanie elementów na początku kontenera */
+    margin-bottom: 20px;
+}
+
+.api-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Odstęp między przyciskiem a polem tekstowym */
+}
+
+.api-button:hover {
+    background-color: #0056b3;
+}
+
+.param-input {
+    padding: 5px;
+    width: auto; /* Ustawienie szerokości pola tekstowego na automatyczną */
+    max-width: 150px; /* Opcjonalne ograniczenie maksymalnej szerokości */
+    flex-shrink: 0; /* Zapobieganie zmniejszaniu szerokości elementu */
+}
+
+.api-result {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
