@@ -55,5 +55,53 @@
 </div>
 
 
+
+<!-- Update item -->
+<div class="api-container">
+    <form id="updateForm">
+        <button type="button" class="api-button" onclick="updateOrder()">Update item</button>
+        <label for="name">Item id:</label>
+        <input type="text" class="param-input" id="itemIdU" name="itemId" placeholder="Id" required>
+
+        <label for="name">Name:</label>
+        <input type="text" class="param-input" id="nameU" name="name" placeholder="Name" required>
+
+        <label for="description">Description:</label>
+        <input type="text" class="param-input" id="descriptionU" name="description" placeholder="Description" required>
+
+        <label for="price">Price:</label>
+        <input type="number" class="param-input" id="priceU" name="price" placeholder="Price" required>
+
+        <label for="orderDateTime">Date and time:</label>
+        <input type="datetime-local" class="param-input" id="dateTimeU" name="orderDateTime" required>
+
+    </form>
+    <div class="api-result" id="updateResult" style="display: none;"></div>
+</div>
+
+<!-- Update item -->
+<div class="api-container">
+    <form id="updateDescriptionForm">
+        <button type="button" class="api-button" onclick="updateDescription()">Update description</button>
+        <label for="name">Item id:</label>
+        <input type="text" class="param-input" id="itemIdUDesc" name="itemId" placeholder="Id" required>
+
+        <label for="description">New Description:</label>
+        <input type="text" class="param-input" id="descriptionUDesc" name="description" placeholder="Description" required>
+
+    </form>
+    <div class="api-result" id="updateDescriptionResult" style="display: none;"></div>
+</div>
+
+<!-- Update item -->
+<div class="api-container">
+    <form id="deleteOrderItemForm">
+        <button type="button" class="api-button" onclick="deleteOrderItem()">Delete item</button>
+        <label for="name">Item id:</label>
+        <input type="text" class="param-input" id="itemIdD" name="itemId" placeholder="Id" required>
+    </form>
+    <div class="api-result" id="deleteResult" style="display: none;"></div>
+</div>
+
 </body>
 </html>

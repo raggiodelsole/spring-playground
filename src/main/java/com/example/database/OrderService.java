@@ -20,7 +20,7 @@ public class OrderService {
     }
 
     public ItemOrder loadById(long id) {
-        return orderItemRepository.findById(id).orElseThrow();
+        return orderItemRepository.findById(id).orElseThrow(() -> new MissingEntityException("Could not found item with id " + id));
     }
 
     public ItemOrder save(ItemOrder itemOrder) {
@@ -32,10 +32,12 @@ public class OrderService {
     }
 
     public int updateDesc(String desc, long id) {
+        orderItemRepository.findById(id).orElseThrow(() -> new MissingEntityException("Could not found item with id " + id));
         return orderItemRepository.updateDesc(desc, id);
     }
 
     public boolean delete(long id) {
+        orderItemRepository.findById(id).orElseThrow(() -> new MissingEntityException("Could not found item with id " + id));
         orderItemRepository.deleteById(id);
         return true;
     }

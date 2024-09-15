@@ -22,9 +22,9 @@ p {
 }
 
 .api-container {
-    display: flex; /* Ustawienie układu na flexbox */
-    align-items: center; /* Wyrównanie elementów pionowo na środku */
-    justify-content: flex-start; /* Wyrównanie elementów na początku kontenera */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 20px;
 }
 
@@ -35,7 +35,7 @@ p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px; /* Odstęp między przyciskiem a polem tekstowym */
+    margin-right: 10px;
 }
 
 .api-button:hover {
@@ -44,9 +44,9 @@ p {
 
 .param-input {
     padding: 5px;
-    width: auto; /* Ustawienie szerokości pola tekstowego na automatyczną */
-    max-width: 150px; /* Opcjonalne ograniczenie maksymalnej szerokości */
-    flex-shrink: 0; /* Zapobieganie zmniejszaniu szerokości elementu */
+    width: auto;
+    max-width: 150px;
+    flex-shrink: 0;
 }
 
 .api-result {
@@ -55,4 +55,8 @@ p {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
+}
+
+#fetchedByIdResult {
+    margin-top: 20px;
 }
